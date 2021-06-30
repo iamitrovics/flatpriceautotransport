@@ -1,0 +1,19 @@
+/*===============================
+=        Rewiews Listing       =
+===============================*/
+#reviews-page {
+  margin-top: 80px;
+  position: relative;
+  background-color: #F2F2F2; }
+  #reviews-page:before {
+    content: '';
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #reviews-page #video-reviews {
+    margin-bottom: 35px; }
+  #reviews-page #textual-reviews .review-box {
+    background-color: #fff; }

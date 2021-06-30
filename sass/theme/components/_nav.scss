@@ -1,0 +1,427 @@
+.mainmenu {
+    background: none;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+    min-height: 20px;
+    width: 100%;
+    .dropdown-menu {
+        padding: 0;
+        margin: 0;
+        border: 0 solid transition !important;
+        border: 0 solid rgba(0, 0, 0, 0.15);
+        border-radius: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    .navbar-nav {
+        a {
+            font-family: $mont-semi;
+            font-size: 0.813em;
+            color: #6a6a6a;
+            text-transform: uppercase;
+            display: block !important;
+            &:hover,
+            &:focus {
+                color: $red-dark;
+                background: #fff;
+                outline: 0;
+                text-decoration: none !important;
+            }
+            @include breakpoint (desktop) {
+                font-size: 0.750em;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 0.750em;
+            }
+        }
+        >li>a {
+            padding-top: 34px;
+            padding-bottom: 34px;
+            padding-left: 12px;
+            padding-right: 12px;
+            @include breakpoint (desktop) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            @include media-breakpoint-only(lg) {
+                padding-left: 11px;
+                padding-right: 11px;
+            }
+            &:hover {
+                &.dropdown-toggle--re {
+                    &:after {
+                        color: $red-dark;
+                    }
+                }
+            }
+            &.dropdown-toggle--re {
+                position: relative;
+                &:after {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    content: "\f078";
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 900;
+                    font-size: 13px;
+                    color: #6A6A6A;
+                    @include animate-fade;
+                    margin-left: 5px;
+                    @include breakpoint (desktop) {
+                        font-size: 10px;
+                        line-height: 16px;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        font-size: 10px;
+                        line-height: 16px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        >.show>a {
+            color: $red-dark;
+            background: #FAFAFA;
+            outline: 0;
+            text-decoration: none !important;
+            &:focus,
+            &:hover {
+                color: $red-dark;
+                background: #FAFAFA;
+                outline: 0;
+                text-decoration: none !important;
+            }
+            &.dropdown-toggle {
+                &:after {
+                    color: $red-dark;
+                }
+            }
+        }
+    }
+}
+
+
+/*==========Sub Menu=v==========*/
+
+.mainmenu {
+    .collapse ul {
+        >li:hover>a,
+        ul>li:hover>a {
+            background: #FAFAFA;
+        }
+    }
+    .collapse ul ul {
+        background: #FAFAFA;
+        border: 1px solid #eee;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        ul>li:hover>a,
+        &.dropdown-menu {
+            background: #FAFAFA;
+        }
+        ul {
+            background: #FAFAFA;
+            &.dropdown-menu {
+                background: #FAFAFA;
+            }
+            ul {
+                background: #FAFAFA;
+                &.dropdown-menu {
+                    background: #FAFAFA;
+                }
+            }
+        }
+        li {
+            padding: 0 7px;
+        }
+        a {
+            padding: 5px 5px;
+            font-size: 13px;
+            text-transform: none;
+            border-bottom: 1px solid #eee;
+        }
+    }
+    ul ul .dropdown-toggle--re {
+        position: relative;
+        &::after {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            content: "\f105";
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            position: absolute;
+            right: 15px;
+        }
+    }
+    .dropdown-menu {
+        >li:last-of-type>a {
+            border-bottom: 0;
+        }
+        &.fade {
+            display: block;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    .dropdown:hover>.dropdown-menu.fade {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+
+/******************************Drop-down menu work on hover**********************************/
+
+@media only screen and (min-width: 767px) {
+    .mainmenu .collapse ul {
+        li:hover>ul {
+            display: block;
+        }
+        ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 210px;
+            display: none;
+            li {
+                position: relative;
+                &:hover>ul {
+                    display: block;
+                }
+            }
+            ul {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                min-width: 160px;
+                display: none;
+                li {
+                    position: relative;
+                    &:hover ul {
+                        display: block;
+                    }
+                }
+                ul {
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    min-width: 250px;
+                    display: none;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav .show .dropdown-menu .dropdown-menu {
+        >li>a {
+            padding: 16px 15px 16px 35px;
+        }
+        .dropdown-menu>li>a {
+            padding: 16px 15px 16px 45px;
+        }
+    }
+}
+
+.sliding-menu-panel {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/******************************Mobile Menu**********************************/
+
+.sliding-menu {
+    position: relative;
+    overflow: hidden;
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        a {
+            display: block;
+            text-transform: uppercase;
+            line-height: 1.4em;
+            font-size: 0.875em;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            &:hover {
+                color: #fff;
+                background: $red-dark;
+                border: none;
+            }
+        }
+        >a {
+            font-family: $mont-semi;
+        }
+    }
+    .active a {
+        color: #fff;
+        background: $red-dark;
+        border: none;
+    }
+    .sliding-menu-nav:before {
+        float: right;
+        margin-left: 1em;
+        margin-right: 15px;
+        content: "\3009";
+    }
+    .sliding-menu-back {
+        color: #fff;
+        background: $red-dark;
+        font-size: 1em;
+        &:before {
+            float: left;
+            margin-right: 1em;
+            content: "\3008";
+            margin-left: 0px;
+        }
+    }
+}
+
+#menu ul li ul li a {
+    font-size: 1px !important;
+    color: #000 !important;
+}
+
+#mobile__brand {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    img {
+        width: 100px;
+    }
+}
+
+.third-level {
+    background: #fff !important;
+}
+
+
+/* mobile btn */
+
+#mobile-menu--btn {
+    @include media-breakpoint-only(md) {
+        right: 40px;
+    }
+    right: 15px;
+    position: absolute;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-top: 7px;
+}
+
+@media only screen and (min-width: 992px) {
+    #mobile-menu--btn {
+        display: none;
+    }
+}
+
+.menu-btn {
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    span {
+        height: 1px;
+        background-color: $red;
+        width: 47px;
+        display: block;
+        float: right;
+        margin-bottom: 15px;
+        transition: .25s ease-in-out;
+    }
+    .open span {
+        color: $red-dark;
+    }
+}
+
+
+/*====================================
+=            Menu Ovelray            =
+====================================*/
+
+.menu-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.active-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-menu-sidebar {
+    width: 400px;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    right: -400px;
+    z-index: 9999;
+    transition: .45s ease-in-out;
+    background: $red;
+    overflow-y: scroll;
+    /* close menu */
+    /* main menu */
+    .close-menu-btn {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #e2e2e2;
+        text-indent: -9999px;
+        background: url(../img/ico/close-btn.png) no-repeat center center;
+        width: 20px;
+        height: 20px;
+    }
+    #sidebar-menu-wrapper #menu .nav-links>li>a:hover {
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .main-menu-sidebar {
+        width: 300px;
+    }
+}
+
+.body-scroll {
+    overflow-y: hidden !important;
+}
+
+.menu-active {
+    right: 0;
+}
+
+
+/*=====  End of Mobile Navbar  ======*/

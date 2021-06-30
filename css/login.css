@@ -1,0 +1,118 @@
+/* Login CSS */
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: #ff4057;
+	box-shadow:none;
+	border:1px solid #ff4057;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 20px;
+	font-weight: bold;
+	transition: .25s ease-in-out;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background: #C03B2B;
+	border:1px solid #C03B2B;
+}
+
+.login #login_error, .login .message {
+	border-left:4px solid #1eab60;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+	color:#ff4057;
+}
+
+.login #backtoblog a {
+	font-weight: bold;
+	color:#C03B2B;
+}
+
+.login #backtoblog a, .login #nav a {
+	font-weight: bold;
+	color:#C03B2B;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #ff4057;
+	box-shadow:none;
+	border:1px solid #ff4057;
+	text-shadow: none;
+	color:#fff;
+}
+
+.wp-core-ui .button-group.button-large .button:hover , .wp-core-ui .button.button-large:hover {
+	background: #C03B2B;
+	border:1px solid #C03B2B;
+}
+
+body.login {
+	background: #fff;
+}
+
+#login {
+	padding-top: 3%!important;
+}
+
+.login form .forgetmenot label {
+	position: relative;
+	top:5px;
+	float:none;
+}
+
+.login form {
+	box-shadow: none!important;
+}
+
+#nav {
+	text-align: center;
+}
+
+#backtoblog a {
+	text-align: center;
+	background:none;
+	display: block;
+	margin:0px;
+	padding:15px;
+	color:#000!important;
+	border:none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: .25s ease-in-out;
+}
+
+#backtoblog a:hover {
+	background: transparent;
+	color:#C03B2B!important;
+}
+
+.login #backtoblog, .login #nav {
+	padding:0px;
+}
+
+.login form {
+	border:1px solid #f0ede9;
+	background: #fff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);		
+}
+
+.login h1 a {
+	margin-bottom: 25px !important;
+}
+
+.login #nav a {
+	color:#000;
+	opacity: 0.4;
+	transition: .25s ease-in-out;
+}
+
+.login #nav a:hover {
+	opacity: 1;
+	color:#C03B2B;
+}

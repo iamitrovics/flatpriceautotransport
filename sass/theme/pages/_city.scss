@@ -1,0 +1,947 @@
+/*===============================
+=          City Guides         =
+===============================*/
+
+#city-guides {
+    padding-top: 85px;
+    padding-bottom: 95px;
+    background-color: #F7F7F7;
+    @include breakpoint (desktop) {
+        padding-bottom: 85px;
+        padding-top: 70px;
+    }
+    @include media-breakpoint-only(lg) {
+        padding-bottom: 80px;
+        padding-top: 65px;
+    }
+    @include media-breakpoint-only(md) {
+        padding-bottom: 50px;
+        padding-top: 55px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+        padding-top: 45px;
+    }
+    h2 {
+        @include inner-title;
+        text-transform: uppercase;
+    }
+    #guides-slider {
+        @include media-breakpoint-down(lg) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+    .slick-slide {
+        margin: 0 15px;
+        @include media-breakpoint-down(lg) {
+            margin: 0 15px;
+        }
+    }
+    .slick-list {
+        margin: 0 -15px;
+        @include media-breakpoint-down(lg) {
+            margin: 0 -15px;
+        }
+    }
+    .guide-box {
+        position: relative;
+        .guide-image {
+            position: relative;
+            img {
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                border: 1px solid $red;
+            }
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: 0 0;
+                span {
+                    width: 64px;
+                    height: 64px;
+                    background: #fff;
+                    text-align: center;
+                    line-height: 64px;
+                    border-radius: 100%;
+                    @include centre(both);
+                    display: block;
+                    color: #000;
+                    font-size: 1.500em;
+                    margin-top: 20px;
+                    opacity: 0;
+                    -webkit-transition: .35s ease-in-out;
+                    transition: .35s ease-in-out;
+                }
+                &:hover {
+                    background-color: rgba($red, .9);
+                    span {
+                        opacity: 1;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .guide-content {
+            h4 {
+                margin-top: 35px;
+                margin-bottom: 25px;
+                @include subheading-text;
+            }
+            p {
+                @include regular-text;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/*===  End of City Guides ===*/
+
+
+/*===============================
+=          Auto Transport       =
+===============================*/
+
+.auto-transport {
+    text-align: center;
+    padding-top: 40px;
+    @include breakpoint (desktop) {
+        padding-top: 30px;
+    }
+    @include media-breakpoint-only(lg) {
+        padding-top: 35px;
+    }
+    @include media-breakpoint-only(md) {
+        padding-top: 35px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-top: 25px;
+    }
+    h3 {
+        @include heading-text;
+        margin-bottom: 45px;
+        @include breakpoint (desktop) {
+            margin-bottom: 45px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 45px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 35px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 25px;
+        }
+    }
+    p {
+        @include regular-text;
+    }
+    .intro {
+        margin-bottom: 95px;
+        @include breakpoint (desktop) {
+            margin-bottom: 80px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 65px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 55px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 40px;
+        }
+    }
+    h4 {
+        @include subheading-text;
+        margin-bottom: 60px;
+        @include breakpoint (desktop) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
+    .services-list {
+        margin-bottom: 50px;
+        @include breakpoint (desktop) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            align-items: center;
+            li {
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin: 15px 0;
+                flex: 0 0 25%;
+                max-width: 25%;
+                display: flex;
+                align-self: stretch;
+                @include media-breakpoint-down(sm) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $mont-med;
+                    font-size: 1.250em;
+                    line-height: 1.2;
+                    text-align: center;
+                    color: $red;
+                    width: 100%;
+                    padding: 21px 12px;
+                    background: transparent;
+                    border: 1px solid $red;
+                    @include breakpoint (desktop) {
+                        font-size: 1.125em;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        font-size: 1em;
+                    }
+                    @include media-breakpoint-only(md) {
+                        font-size: 1em;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1em;
+                    }
+                    &:hover {
+                        border-color: $red-dark;
+                        background-color: $red-dark;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .city-image {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        @include breakpoint (desktop) {
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .featured-services {
+        margin-top: 50px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        @include breakpoint (desktop) {
+            margin-top: 40px;
+            padding-bottom: 60px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-top: 40px;
+            padding-bottom: 50px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+            padding-bottom: 30px;
+        }
+        .featured-box {
+            margin-bottom: 40px;
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            flex: 0 0 25%;
+            max-width: 25%;
+            text-align: left;
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .featured-image {
+                position: relative;
+                img {
+                    width: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                }
+                a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: 0 0;
+                    span {
+                        width: 64px;
+                        height: 64px;
+                        background: #fff;
+                        text-align: center;
+                        line-height: 64px;
+                        border-radius: 100%;
+                        @include centre(both);
+                        display: block;
+                        color: #000;
+                        font-size: 1.500em;
+                        margin-top: 20px;
+                        opacity: 0;
+                        -webkit-transition: .35s ease-in-out;
+                        transition: .35s ease-in-out;
+                    }
+                    &:hover {
+                        background-color: rgba($red, .9);
+                        span {
+                            opacity: 1;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .featured-content {
+                h4 {
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                    font-family: $mont-semi;
+                    font-size: 1.750em;
+                    color: #000;
+                    @include breakpoint (desktop) {
+                        font-size: 1.5em;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        font-size: 1.3em;
+                    }
+                    @include media-breakpoint-only(md) {
+                        font-size: 1.07em;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1.2em;
+                    }
+                    a {
+                        color: inherit;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+                p {
+                    font-family: $mont-light;
+                    font-size: 0.875em;
+                    line-height: 1.358;
+                    color: #8d8d8d;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*=== End of Auto Transport  ==*/
+
+
+/*===============================
+=          Testimonials        =
+===============================*/
+
+#testimonials {
+    background-color: #9F9F9F;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    @include breakpoint (desktop) {
+        padding-bottom: 70px;
+        padding-top: 90px;
+    }
+    @include media-breakpoint-only(lg) {
+        padding-bottom: 60px;
+        padding-top: 75px;
+    }
+    @include media-breakpoint-only(md) {
+        padding-bottom: 50px;
+        padding-top: 55px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+        padding-top: 45px;
+    }
+    h3 {
+        @include heading-text;
+        margin-bottom: 75px;
+        color: #fff;
+        @include breakpoint (desktop) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
+    .testimonial-video {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        max-width: 837px;
+        width: 100%;
+        @include media-breakpoint-only(lg) {
+            max-width: 80%;
+        }
+        @include media-breakpoint-only(md) {
+            max-width: 80%;
+        }
+        @include animate-fade;
+        &:hover {
+            border-color: $red-dark;
+        }
+        iframe {
+            border: 1px solid $red;
+            width: 100%;
+            height: 472px;
+        }
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            &:hover {
+                i {
+                    color: $red-dark;
+                }
+            }
+            i {
+                @include animate-fade;
+                font-size: 53px;
+                color: $red;
+            }
+        }
+    }
+}
+
+
+/*=== End of Testmonials  ==*/
+
+
+/*===============================
+=            Reviews           =
+===============================*/
+
+#reviews {
+    position: relative;
+    background: #fff 0 0 no-repeat;
+    background-size: cover;
+    @include media-breakpoint-up(xl) {
+        min-height: 638px;
+    }
+    .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0.79;
+        z-index: 1;
+    }
+    .review-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @include breakpoint (desktop) {
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-bottom: 40px;
+            padding-top: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+        h3 {
+            @include heading-text;
+            margin-bottom: 120px;
+            @include breakpoint (desktop) {
+                margin-bottom: 90px;
+            }
+            @include media-breakpoint-only(lg) {
+                margin-bottom: 70px;
+            }
+            @include media-breakpoint-only(md) {
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 20px;
+            }
+        }
+        .review-text {
+            margin-bottom: 95px;
+            text-align: center;
+            @include breakpoint (desktop) {
+                margin-bottom: 80px;
+            }
+            @include media-breakpoint-only(lg) {
+                margin-bottom: 70px;
+            }
+            @include media-breakpoint-only(md) {
+                margin-bottom: 50px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 40px;
+            }
+            p {
+                max-width: 842px;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: $mont-light;
+                font-size: 2.125em;
+                line-height: 1.294;
+                text-align: center;
+                color: #000;
+                margin-bottom: 0;
+                @include breakpoint (desktop) {
+                    font-size: 2em;
+                }
+                @include media-breakpoint-only(lg) {
+                    font-size: 1.8em;
+                }
+                @include media-breakpoint-only(md) {
+                    font-size: 1.4em;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.1em;
+                }
+            }
+        }
+        footer {
+            .rating {
+                margin-bottom: 10px;
+                i {
+                    font-size: 18px;
+                    display: inline-block;
+                    color: $red;
+                    vertical-align: middle;
+                    margin-left: 6px;
+                    margin-right: 6px;
+                    @include media-breakpoint-only(lg) {
+                        font-size: 16px;
+                    }
+                    @include media-breakpoint-only(md) {
+                        font-size: 14px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .author {
+                font-family: $mont-bold;
+                font-size: 1.125em;
+                line-height: 1.389;
+                color: #9f9f9f;
+                @include breakpoint (desktop) {
+                    font-size: 1.063em;
+                }
+                @include media-breakpoint-only(lg) {
+                    font-size: 1.063em;
+                }
+                @include media-breakpoint-only(md) {
+                    font-size: 1em;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+/*======= End of Reviews  ========*/
+
+
+/*===============================
+=            Why Us             =
+===============================*/
+
+#why-us {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    text-align: center;
+    @include breakpoint (desktop) {
+        padding-bottom: 50px;
+        padding-top: 80px;
+    }
+    @include media-breakpoint-only(lg) {
+        padding-bottom: 40px;
+        padding-top: 70px;
+    }
+    @include media-breakpoint-only(md) {
+        padding-bottom: 40px;
+        padding-top: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+        padding-top: 50px;
+    }
+    h3 {
+        @include heading-text;
+        margin-bottom: 75px;
+        @include breakpoint (desktop) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+    }
+    .why-box {
+        border: 1px solid $red;
+        padding: 25px 25px 35px 25px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+        h5 {
+            font-family: $mont-bold;
+            font-size: 1.250em;
+            line-height: 1.2;
+            text-align: center;
+            color: $red;
+            margin-bottom: 35px;
+            @include breakpoint (desktop) {
+                font-size: 1.125em;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-only(md) {
+                font-size: 1em;
+                margin-bottom: 25px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+        }
+        p {
+            font-family: $mont-reg;
+            font-size: 1.250em;
+            line-height: 1.2;
+            color: #9f9f9f;
+            margin-bottom: 35px;
+            @include breakpoint (desktop) {
+                font-size: 1.125em;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-only(md) {
+                font-size: 0.938em;
+                margin-bottom: 25px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 0.938em;
+                margin-bottom: 20px;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/*======= End Why Us  ========*/
+
+
+/*===============================
+=          Bottom CTA          =
+===============================*/
+
+#bottom-cta {
+    background-color: $red-dark;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    .row {
+        align-items: center;
+    }
+    p,
+    a,
+    address {
+        color: #fff;
+    }
+    br {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+    h6 {
+        max-width: 407px;
+        font-family: $mont-bold;
+        font-size: 1.250em;
+        line-height: 1.7;
+        color: #fff;
+        margin-bottom: 0;
+        @include breakpoint (desktop) {
+            font-size: 1.125em;
+        }
+        @include media-breakpoint-only(lg) {
+            font-size: 1em;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 1em;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 1em;
+        }
+    }
+    .contact {
+        font-family: $mont-reg;
+        font-size: 1.250em;
+        line-height: 1.2;
+        color: #fff;
+        text-align: right;
+        @include breakpoint (desktop) {
+            font-size: 1.125em;
+        }
+        @include media-breakpoint-only(lg) {
+            font-size: 1em;
+        }
+        @include media-breakpoint-down(md) {
+            line-height: 1.7;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 1em;
+        }
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+        strong {
+            font-family: $mont-bold;
+            font-weight: normal;
+            &:nth-of-type(2) {
+                @include media-breakpoint-up(lg) {
+                    margin-left: 5px;
+                }
+            }
+        }
+        a {
+            color: inherit;
+            &:hover {
+                opacity: .7;
+            }
+        }
+        address {
+            font-style: normal;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+/*======= Bottom CTA  ========*/
+
+#homepage {
+    padding-bottom: 80px;
+}
+
+section.auto-services {
+    .services-list {
+        margin-bottom: 70px;
+        @include breakpoint (desktop) {
+            margin-bottom: 50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-only(md) {
+            margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+        }
+        h4 {
+            @include subheading-text;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            align-items: center;
+            li {
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin: 15px 0;
+                flex: 0 0 25%;
+                max-width: 25%;
+                display: flex;
+                align-self: stretch;
+                @include media-breakpoint-down(sm) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $mont-med;
+                    font-size: 1.250em;
+                    line-height: 1.2;
+                    text-align: center;
+                    color: $red;
+                    width: 100%;
+                    padding: 21px 12px;
+                    background: transparent;
+                    border: 1px solid $red;
+                    @include breakpoint (desktop) {
+                        font-size: 1.125em;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        font-size: 1em;
+                    }
+                    @include media-breakpoint-only(md) {
+                        font-size: 1em;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1em;
+                    }
+                    &:hover {
+                        border-color: $red-dark;
+                        background-color: $red-dark;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.city__image {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    img {
+        margin:0px auto;
+        display: block;
+        width: 80%;
+        border-radius: 4px;
+    }
+}
+
+.auto-transport {
+    .main__content {
+        margin-bottom: 40px;
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 30px;
+            font-size: 2.25em;
+            text-align: left;
+        }
+        h2 {
+            margin-bottom: 25px;
+        }
+        p {
+            margin-bottom: 35px;
+            font-size: 1em;
+            a {
+                color:$red;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            margin-bottom: 30px;
+            li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .image-holder {
+        margin-bottom: 50px;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.city-single--wrapper {
+    text-align: left!important;
+}

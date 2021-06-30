@@ -1,0 +1,114 @@
+/*===============================
+=          Quote Page           =
+===============================*/
+#quote-page {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    h1 {
+        text-transform: none;
+    }
+    h3,p {
+        max-width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #auto-transport {
+        h3 {
+            margin-top: 65px;
+            &:first-of-type {
+                margin-top: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 35px;
+            }
+        }
+    }
+    #about-page {
+        padding-bottom: 0;
+    }
+}
+
+.default-accordion {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-only(lg) {
+        margin-bottom: 50px;
+        margin-top: 60px;
+    }
+    @include media-breakpoint-only(md) {
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 0px;
+        margin-top: 50px;
+    }
+    .faq-box {
+        border: 1px solid $red;
+        margin-bottom: 15px;
+
+    }
+    h4 {
+        position: relative;
+        padding:0;
+        margin: 0!important;
+        border: 0;
+        background: #fff;
+        padding: 16px 65px;
+        color: $red!important;
+        @include media-breakpoint-down(md) {
+            font-size: 18px;
+            padding: 16px 40px;
+        }
+        &:after {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f067";
+            @include centre(y);
+            right: 30px;
+            font-size: 26px;
+            font-weight: 300;
+            color: $red;
+            @include animate-fade;
+            @include breakpoint (desktop) {
+                font-size: 24px;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 22px;
+            }
+            @include media-breakpoint-only(md) {
+                font-size: 20px;
+                right: 15px;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 18px;
+                right: 15px;
+            }
+        }
+        &:focus {
+            outline: none!important;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &.ui-state-active {
+            &:after {
+                -webkit-transform: translateY(-50%)  rotate(45deg);
+                -moz-transform: translateY(-50%)  rotate(45deg);
+                -ms-transform: translateY(-50%)  rotate(45deg);
+                -o-transform: translateY(-50%)  rotate(45deg);
+                transform: translateY(-50%)  rotate(45deg);
+            }
+        } 
+    }
+    .ui-accordion-content {
+        padding: 20px 25px 0px 25px;
+        p {
+            @include regular-text2;
+        }
+    }
+}
+
+/*===  End of Quote Page ===*/

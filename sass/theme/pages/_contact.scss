@@ -1,0 +1,237 @@
+/*===============================
+=        Contact Page          =
+===============================*/
+
+#contact-page {
+    .row.reverse-mob {
+        @include media-breakpoint-down(sm) {
+            flex-direction: column-reverse;
+        }
+    }
+    .map-wrap {
+        position: static;
+        height: 640px;
+        @include media-breakpoint-down(md) {
+            position: relative;
+        }
+         @include media-breakpoint-down(sm) {
+            position: relative;
+            height: 300px;
+        }
+        p {
+            height: 100%;
+            margin-bottom: 0px;
+        }
+        .map {
+            position: absolute;
+            left: 0;
+            width: 50.5vw;
+            height: 640px;
+            @include breakpoint (desktop) {
+                width: 48vw;
+            }
+            @include media-breakpoint-only(lg) {
+                width: 47vw;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .contact-form {
+        padding-top: 65px;
+        max-width: 516px;
+        margin-left: auto;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-family: $mont-elight;
+            font-size: 2.375em;
+            color: $red;
+            text-transform: capitalize;
+            @include breakpoint (desktop) {
+                font-size: 2em;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 1.7em;
+            }
+            @include media-breakpoint-only(md) {
+                font-size: 1.5em;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 1.3em;
+            }
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .wpcf7-not-valid-tip {
+            font-size: 12px;
+            padding-top: 3px;
+        }
+        .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+            color:$red;
+            font-size: 14px;
+            font-family: $mont-bold;
+            border:none;
+            margin:0px;
+            padding:0px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"], textarea {
+            width: 100%;
+            height: 40px;
+            border: 0;
+            border-bottom: 1px solid $red;
+            background: transparent;
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+            font-family: $mont-light;
+            font-size: 1em;
+            text-align: left;
+            color: #505050;
+            padding: 4px 7px 4px 7px;
+            @include breakpoint (desktop) {
+                font-size: 15px;
+            }
+            @include media-breakpoint-only(lg) {
+                font-size: 0.875em;
+            }
+            @include media-breakpoint-down(md) {
+                font-size: 0.750em;
+            }
+            @include animate-fade;
+            &:focus {
+                outline: none!important;
+                border-color: $red-dark;
+            }
+            @include input-placeholder {
+                color: #505050;
+            }
+        }
+        textarea {
+            height: auto;
+            border: 1px solid $red;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-height: 216px;
+        }
+        .action-area {
+            @include media-breakpoint-up(md) {
+                display: flex;
+                align-items: flex-start;
+                padding-top: 10px;
+            }
+            .wpcf7-list-item {
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+            .col {
+                @include media-breakpoint-down(md) {
+                    min-width: 100%;
+                }
+                &:last-of-type {
+                    flex-grow: 0;
+                }
+            }
+            .agreement {
+                font-family: $mont-light;
+                font-size: 1em;
+                color: #505050;
+                @include breakpoint (desktop) {
+                    font-size: 15px;
+                }
+                @include media-breakpoint-only(lg) {
+                    font-size: 0.875em;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 0.750em;
+                }
+                a  {
+                    color:$red;
+                }                
+                label {
+                    font-family: $mont-light;
+                    font-size: 1em;
+                    color: #505050;
+                    padding-left: 30px;
+                    @include breakpoint (desktop) {
+                        font-size: 15px;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        font-size: 0.875em;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 0.750em;
+                    }
+                }
+                .control__indicator {
+                    background-color: transparent;
+                    top: 2px;
+                    width: 17px!important;
+                    height: 17px!important;
+                    border: 2px solid $red;
+                    border-radius: 2px;
+                    @include breakpoint (desktop) {
+                        font-size: 15px;
+                    }
+                    @include media-breakpoint-only(lg) {
+                        top: 0;
+                    }
+                    @include media-breakpoint-down(md) {
+                        top: 0;
+                    }
+                    &:after {
+                        left: 4px;
+                        top: 1px;
+                        border-color: $red;
+                        border-width: 0 2px 2px 0;
+                    }
+                }
+            }
+            input[type="submit"] {
+                display: block;
+                height: 47px;
+                line-height: 47px;
+                background: $red;
+                font-family: $mont-reg;
+                text-transform: uppercase;
+                font-size: 15px;
+                text-align: center;
+                color: #fff;
+                border: 0;
+                padding: 0 35px;
+                @include animate-fade;
+                &:hover {
+                    background-color: $red-dark;
+                }
+                @include media-breakpoint-up(md) {
+                    margin-left: auto;
+                }
+                @include media-breakpoint-only(lg) {
+                    font-size: 0.875em;
+                }
+                @include media-breakpoint-down(md) {
+                    font-size: 0.813em;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*====  End of Contact Page ====*/
