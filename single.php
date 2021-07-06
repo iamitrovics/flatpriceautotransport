@@ -155,7 +155,76 @@ $container = get_theme_mod( 'understrap_container_type' );
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
                                         </div>
-                                        <!-- /.default-accordion -->                                    
+                                        <!-- /.default-accordion -->    
+
+                                        <?php elseif( get_row_layout() == 'table' ): ?>
+
+                                        <table style="width:100%" class="single-table">
+                                            <thead>
+                                                <tr role="row">
+
+                                                <?php
+
+                                                    // check if the repeater field has rows of data
+                                                    if(have_rows('table_head_cells')):
+
+                                                        // loop through the rows of data
+                                                        while(have_rows('table_head_cells')) : the_row();
+
+                                                            $hlabel = get_sub_field('table_cell_label_thead');
+
+                                                            ?>  
+
+                                                            <th tabindex="0" rowspan="1" colspan="1"><?php echo $hlabel; ?></th>
+
+                                                        <?php endwhile;
+
+                                                    else :
+                                                        echo 'No data';
+                                                    endif;
+                                                    ?>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <?php while ( have_posts() ) : the_post(); ?>
+
+                                                <?php 
+
+                                                // check for rows (parent repeater)
+                                                if( have_rows('table_body_row') ): ?>
+                                                    
+                                                    <?php 
+
+                                                    // loop through rows (parent repeater)
+                                                    while( have_rows('table_body_row') ): the_row(); ?>
+
+                                                            <?php 
+
+                                                            // check for rows (sub repeater)
+                                                            if( have_rows('table_body_cells') ): ?>
+                                                                <tr>
+                                                                    <?php 
+
+                                                                    // loop through rows (sub repeater)
+                                                                    while( have_rows('table_body_cells') ): the_row();
+
+                                                                        
+                                                                        ?>
+                                                                        <td><?php the_sub_field('table_cell_label_tbody'); ?></td>
+                                                                    <?php endwhile; ?>
+                                                                </tr>
+                                                            <?php endif; //if( get_sub_field('') ): ?>
+
+                                                    <?php endwhile; // while( has_sub_field('') ): ?>
+                                                        
+                                                <?php endif; // if( get_field('') ): ?>
+
+                                                <?php endwhile; // end of the loop. ?>
+                                                
+                                            </tbody>
+                                        </table>                                
 
                                 <?php endif;
                             endwhile;

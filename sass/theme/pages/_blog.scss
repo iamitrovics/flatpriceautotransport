@@ -240,6 +240,23 @@
             display: block;
         }
     }
+    .single-table {
+        @include media-breakpoint-down(sm) {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        th {
+            border: 1px solid;
+            background: rgba(238, 56, 0, 0.3);
+            color: #000;
+            padding: 3px 10px;
+        }
+        td {
+            border: 1px solid;
+            padding: 3px 10px;
+        }
+    }
     // toc
     .blog__toc {
         margin-bottom: 50px;
