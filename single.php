@@ -81,7 +81,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                                             ?> 
 
                                             <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
-                                        </div>
                                         <!-- // inner image  -->
                                     </div>
 
@@ -226,11 +225,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                                             </tbody>
                                         </table>                                
 
-                                <?php endif;
-                            endwhile;
-                        else :
-                        endif;
-                        ?>
+                                    <?php endif; ?>
+                            
+                            <?php endwhile; ?>
+
+                        <?php endif; ?> 
 
                     </div>
                     <div class="author__card">
