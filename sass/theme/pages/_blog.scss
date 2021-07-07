@@ -241,6 +241,7 @@
         }
     }
     .single-table {
+        margin-bottom: 30px;
         @include media-breakpoint-down(sm) {
             display: block;
             overflow-x: auto;
