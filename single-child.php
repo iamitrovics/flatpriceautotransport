@@ -136,23 +136,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                                 <?php elseif( get_row_layout() == 'accordion' ): ?>		
 
-                                    <div class="blog__accordion">
-                                        <h3><?php the_sub_field('accordion_title'); ?></h3>
-                                        <div class="accordion__list">
+                                    <div class="default-accordion blog__acc">
+                                            <h3><?php the_sub_field('accordion_title'); ?></h3>
                                             <?php if( have_rows('accordion_list') ): ?>
                                                 <?php while( have_rows('accordion_list') ): the_row(); ?>
-                                                    <button class="accordion"><h4><?php the_sub_field('heading'); ?></h4></button>
-                                                    <div class="panel">
-                                                        <div class="panel__content">
-                                                        <?php the_sub_field('content'); ?>
+
+                                                    <div class="faq-box">
+                                                        <h4><?php the_sub_field('heading'); ?></h4>
+
+                                                        <div>
+                                                            <?php the_sub_field('content'); ?>
+                                                            <!-- /.faq-box -->
                                                         </div>
+                                                        <!-- /.faq-box -->
                                                     </div>
+
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
                                         </div>
-                                        <!-- // list  -->
-                                    </div>
-                                    <!-- // accordion  -->
+                                        <!-- /.default-accordion --> 
 
                                     <?php elseif( get_row_layout() == 'table' ): ?>
 
