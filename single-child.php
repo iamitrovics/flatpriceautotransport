@@ -18,7 +18,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <header>
                         <h1><?php the_title(''); ?></h1>
                         <div class="metas">
-                            <span class="blog-date"><i class="fal fa-calendar-alt"></i> <?php echo get_the_date( 'F j, Y' ); ?></span>
+                            <span class="blog-date"><i class="fal fa-calendar-alt"></i> <?php echo get_the_date( 'F j, Y' ); ?></span><br>
+                            <span class="meta-author-cat">Posted in
+                            
+                                <?php
+                                global $post;
+                                $categories = get_the_category($post->ID);
+                                $cat_link = get_category_link($categories[0]->cat_ID);
+                                echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
+                                ?>   /                            
+                                By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                            </span>
                         </div>
                         <!-- // metas  -->
                     </header>
@@ -232,10 +242,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                         ?>
 
                     </div>
-                    <div class="author__card">
-                        <span>Written By: </span> <strong><?php the_author(); ?></strong>
-                    </div>
-                    <!-- // card  -->
                 </div>
                 <!-- // col  -->
             </div>
