@@ -224,6 +224,9 @@
     // image
     .image__inner {
         margin-bottom: 50px;
+        img {
+            width: 100%;
+        }
     }
     // half image
     .image__half {
