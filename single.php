@@ -166,6 +166,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         </div>
                                         <!-- /.default-accordion -->    
 
+
+                                    <?php elseif( get_row_layout() == 'quote_cta' ): ?>
+
+                                        <div class="quote-cta--single">
+                                            <span class="title"><?php the_sub_field('cta_title'); ?></span>
+                                            <a href="#bottom-form" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
+                                        </div>
+                                        <!-- // single  -->                                           
+
                                         <?php elseif( get_row_layout() == 'table' ): ?>
 
                                         <table style="width:100%" class="single-table">
@@ -250,6 +259,22 @@ $container = get_theme_mod( 'understrap_container_type' );
         <!-- // container  -->
     </article>
     <!-- // single  -->
+
+    <div id="bottom-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+
+                    <?php include(TEMPLATEPATH . '/inc/quote-header.php'); ?>
+
+                </div>
+            </div>
+            <!-- // row  -->
+
+        </div>
+        <!-- // container  -->
+    </div>
+    <!-- // bototm form  -->
 
 <?php
 get_footer();

@@ -271,9 +271,12 @@
     }
     // vide 
     .video__holder {
+        text-align: center;
         margin-bottom: 50px;
         iframe {
             max-width: 100%;
+            display: block;
+            margin:0px auto;
         }
     }
     // acc
@@ -298,4 +301,57 @@
         font-family: $font-heading;
         font-size: 2em;
     }    
+}
+
+// CTA form
+#bottom-form {
+    #booking-form {
+        @include clear-pos;
+        width: 100%;
+        height: auto;
+        padding:30px;
+        padding-bottom: 100px;
+        ul.nav {
+            @include media-breakpoint-down(sm) {
+                display: block;
+            }
+            li {
+                @include media-breakpoint-down(sm) {
+                    width: 100%!important;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.quote-cta--single {
+    border:5px solid $red;
+    padding:30px;
+    text-align: center;
+    margin-bottom: 40px;
+    span.title {
+        display: block;
+        font-size: 38px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        @include media-breakpoint-down(md) {
+            font-size: 30px;
+        }
+    }
+    a.btn-cta {
+        text-transform: uppercase;
+        font-size: 18px;
+        background:$red;
+        color:$white!important;
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 60px;
+        line-height: 60px;
+        display: inline-block;
+        &:hover {
+            background:$red-dark;
+            text-decoration: none;
+        }
+    }
 }
