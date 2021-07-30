@@ -178,6 +178,8 @@
 
         });
 
+		$('.main__content a').attr("target","_blank");
+
         $('.date-picker-input').on('click', function(e) {
           e.preventDefault();
           $(this).attr("autocomplete", "off");  
