@@ -1,5 +1,41 @@
 <?php get_header(); ?>
 
+    <header class="blog-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><?php single_cat_title('Category: '); ?></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /.blog-header -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blog-filters">
+                    <ul>
+                        <li><a href="<?php bloginfo('url'); ?>/blog" class="active">All</a></li>
+                        <?php
+                            $category = get_the_category($post_id);
+                            foreach($category as $cat)
+                            {
+                            ?>
+                            <li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name ?></a></li>
+                            <?php
+                            }
+                        ?>                        
+                    </ul>
+                </div>
+                <!-- /.blog-filters -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
     <section id="blog__listing">
         <div class="container">
 

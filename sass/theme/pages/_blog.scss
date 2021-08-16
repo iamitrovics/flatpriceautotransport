@@ -1,6 +1,15 @@
 // Listing
+
+.blog-header {
+	h1 {
+        padding-top: 60px;
+		color: $red;
+        font-family: "Montserrat ExtraLight";
+		text-transform: capitalize;
+	}
+}
 #blog__listing {
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 100px;
     @include media-breakpoint-down(md) {
         padding-top: 40px;
@@ -103,6 +112,45 @@
             }
         }
     }
+}
+
+.blog-filters {
+	margin-top: 50px;
+	@include media-breakpoint-down(lg) {
+		margin-top: 40px;
+	}
+	ul {
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 25px;
+			@include media-breakpoint-down(sm) {
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-right: 10px;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				display: block;
+				color: $red;
+				background-color: $white;
+                border: 1px solid $red;
+				border-radius: 8px;
+				padding: 5px 32px;
+				text-transform: uppercase;
+				text-align: center;
+				&.active, &:hover {
+					background-color: $red;
+					color: $white;
+				}
+				@include media-breakpoint-down(sm) {
+					font-size: 1em;
+				}
+			}
+		}
+	}
 }
 
 // Pagination
