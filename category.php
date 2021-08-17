@@ -17,15 +17,7 @@
                 <div class="blog-filters">
                     <ul>
                         <li><a href="<?php bloginfo('url'); ?>/blog" class="active">All</a></li>
-                        <?php
-                            $category = get_the_category($post_id);
-                            foreach($category as $cat)
-                            {
-                            ?>
-                            <li><a href="<?php echo get_category_link($cat->cat_ID); ?>"><?php echo $cat->name ?></a></li>
-                            <?php
-                            }
-                        ?>                        
+                        <?php wp_list_categories('title_li='); ?>
                     </ul>
                 </div>
                 <!-- /.blog-filters -->
