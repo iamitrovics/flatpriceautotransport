@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <header>
                         <h1><?php the_title(''); ?></h1>
                         <div class="metas">
-                            <span class="blog-date"><i class="fal fa-calendar-alt"></i> <?php echo get_the_date( 'F j, Y' ); ?></span><br>
+                            <span class="blog-date"><i class="fal fa-calendar-alt"></i> <?php echo get_the_date( 'F j, Y' ); ?></span> / 
                             <span class="meta-author-cat">Posted in
                             
                                 <?php
@@ -26,9 +26,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                                 $categories = get_the_category($post->ID);
                                 $cat_link = get_category_link($categories[0]->cat_ID);
                                 echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
-                                ?>   /                            
-                                By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                                ?>
                             </span>
+                            <div class="author-desc">
+                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+                                <div class="author-content">
+                                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                                    <p><?php the_author_description(); ?></p>
+                                </div>
+                                <!-- /.author-content -->
+                            </div>
                         </div>
                         <!-- // metas  -->
                     </header>
