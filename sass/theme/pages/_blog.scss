@@ -8,7 +8,7 @@
 		text-transform: capitalize;
 	}
 }
-#blog__listing {
+#blog__listing, .similar-posts {
     padding-top: 60px;
     padding-bottom: 100px;
     @include media-breakpoint-down(md) {
@@ -109,6 +109,32 @@
                     color:$red-dark;
                     border-color:$red-dark;
                 }
+            }
+        }
+    }
+}
+
+.similar-posts {
+    &.first-child-box {
+        padding-bottom: 0;
+    }
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    .blog__card {
+        display: block;
+        .blog__image {
+            width: 100%;
+        }
+        .blog__content {
+            width: 100%;
+            padding: 0;
+            .blog-date {
+                margin: 10px 0;
             }
         }
     }
