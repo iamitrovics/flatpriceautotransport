@@ -11,34 +11,66 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+    <header id="hero-banner">
+        <div id="hero-content">
+            <div class="overlay"></div>
+            <?php
+            $imageID = get_field('header_image_parent_child');
+            $image = wp_get_attachment_image_src( $imageID, 'slider-image' );
+            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+            ?> 
+
+            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+            <div class="caption">
+                <div class="container">
+                    <div class="caption__holder">
+
+                        <?php 
+                        $values = get_field( 'custom_title_parent_child' );
+                        if ( $values ) { ?>
+                            <h1><?php the_field('custom_title_parent_child'); ?></h1>
+                        <?php 
+                        } else { ?>
+                            <h1><?php the_title(); ?></h1>
+                        <?php } ?>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#hero-content -->
+
+        <?php include(TEMPLATEPATH . '/inc/quote-header.php'); ?>
+
+    </header>
+    <!-- /.hero-banner -->
+
+    <div id="city-nav">
+        <div class="container">
+            <?php if( have_rows('list_of_posts_parent') ): ?>
+                <?php while( have_rows('list_of_posts_parent') ): the_row(); ?>
+
+                    <div class="nav-col">
+                        <a href="<?php the_sub_field('link_to_post'); ?>">
+                            <div class="icon">
+                                <img src="<?php the_sub_field('icon'); ?>" alt="">
+                            </div>
+                            <span><?php the_sub_field('label'); ?></span>
+                        </a>
+                    </div>
+                    <!-- // col  -->
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+    <!-- // cta nav  -->
+
     <article id="blog__single">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <header>
-                        <h1><?php the_title(''); ?></h1>
-                        <div class="metas">
-                            <span class="blog-date"><i class="fal fa-calendar-alt"></i> <?php echo get_the_date( 'F j, Y' ); ?></span> / 
-                            <span class="meta-author-cat">Posted in
-                            
-                                <?php
-                                global $post;
-                                $categories = get_the_category($post->ID);
-                                $cat_link = get_category_link($categories[0]->cat_ID);
-                                echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
-                                ?>
-                            </span>
-                            <div class="author-desc">
-                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
-                                <div class="author-content">
-                                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
-                                    <p><?php the_author_description(); ?></p>
-                                </div>
-                                <!-- /.author-content -->
-                            </div>
-                        </div>
-                        <!-- // metas  -->
-                    </header>
+
                     <div class="blog__content">
 
                     <?php
