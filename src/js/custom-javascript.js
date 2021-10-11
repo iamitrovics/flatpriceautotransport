@@ -64,6 +64,8 @@
         $('#city-guides .guide-box .guide-content h4, #reviews-page #textual-reviews .review-box h3').matchHeight();
         $('#why-us .why-box h5').matchHeight();
         $('#why-us .why-box .why-text').matchHeight();
+		$('#city-nav .container .nav-col a').matchHeight();
+		
         
         $(".testimonial-video .various").fancybox({
 		    maxWidth  : 800,
@@ -119,6 +121,50 @@
 		    },
 		  ]
 		});
+
+        $('#nav-slider').slick({
+			infinite: true,
+			speed: 300,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			autoplay: true,
+			autoplaySpeed: 8000,
+			responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				  slidesToShow: 4,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+			  breakpoint: 991,
+			  settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			]
+		  });
+
 		jQuery("#faq-accordion").accordion({
 		    heightStyle: "content",
 		    header: "h4",

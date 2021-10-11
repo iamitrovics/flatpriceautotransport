@@ -47,21 +47,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <div id="city-nav">
         <div class="container">
+            <div id="nav-slider">
             <?php if( have_rows('list_of_posts_parent') ): ?>
                 <?php while( have_rows('list_of_posts_parent') ): the_row(); ?>
-
-                    <div class="nav-col">
-                        <a href="<?php the_sub_field('link_to_post'); ?>">
-                            <div class="icon">
-                                <img src="<?php the_sub_field('icon'); ?>" alt="">
-                            </div>
-                            <span><?php the_sub_field('label'); ?></span>
-                        </a>
+                
+                    <div class="item">
+                        <div class="nav-col">
+                            <a href="<?php the_sub_field('link_to_post'); ?>">
+                                <div class="icon">
+                                    <img src="<?php the_sub_field('icon'); ?>" alt="">
+                                </div>
+                                <span><?php the_sub_field('label'); ?></span>
+                            </a>
+                        </div>
+                        <!-- // col  -->
                     </div>
-                    <!-- // col  -->
 
                 <?php endwhile; ?>
             <?php endif; ?>
+            </div>
+            <!-- // slider  -->
         </div>
     </div>
     <!-- // cta nav  -->
@@ -357,6 +362,18 @@ $container = get_theme_mod( 'understrap_container_type' );
         <!-- // container  -->
     </div>
     <!-- // bototm form  -->
+
+
+    <script>
+    jQuery(function($) {
+    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+    $('#city-nav a').each(function() {
+    if (this.href === path) {
+    $(this).addClass('active');
+    }
+    });
+    });
+</script>
 
 <?php
 get_footer();

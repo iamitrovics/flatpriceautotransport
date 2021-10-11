@@ -524,38 +524,24 @@
 // City
 #city-nav {
     background:#2b2b2b;
-    height: 80px;
     @include media-breakpoint-down(sm) {
         height: auto;
     }
     .container {
-        display: flex;
-        justify-content: center;
-        @include media-breakpoint-down(sm) {
-            flex-wrap: wrap;
-        }
         .nav-col {
-            height: 80px;
-            flex-basis: 0;
-            flex-grow: 1;
-            max-width: 100%;
-            text-align: center;
-            @include media-breakpoint-down(sm) {
-                width: 50%;
-                margin-bottom: 8px;
-                flex-basis: auto;
-                flex-grow:initial;
-            }            
+            text-align: center;           
             a {
                 display: block;
                 width: 100%;
                 height: 100%;
-                padding-top: 12px;
-                padding-left: 30px;
-                padding-right: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
                 @include media-breakpoint-down(sm) {
                     padding-left: 0px;
                     padding-right: 0px;
+                }
+                &.active {
+                    background:$red;
                 }
                 &:hover {
                     background: $red;
@@ -575,11 +561,13 @@
                 @include centre(both);
             }
             span {
-                font-size: 14px;
+                font-size: 12px;
+                line-height: 1.3;
                 text-transform: uppercase;
                 color:$white;
+                display: block;
                 @include media-breakpoint-down(sm) {
-                    font-size: 13px;
+                    font-size: 11px;
                 }
             }
         }
