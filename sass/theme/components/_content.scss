@@ -247,6 +247,44 @@
     margin-bottom: 50px;
     flex:0 0 50%!important;
 }
+.feat-33 {
+    max-width: 31.3%!important;
+    margin-bottom: 50px;
+    flex:0 0 31.3%!important;
+    padding: 15px;
+    border: 2px solid $red;
+    margin: 0 5px;
+    @include media-breakpoint-down(sm) {
+		max-width: 90%!important;
+        flex:0 0 90%!important;
+	}
+    h4 {
+        font-size: 1.5em !important;
+    }
+    p {
+        min-height: 80px;
+        margin-bottom: 10px !important;
+        @include media-breakpoint-down(sm) {
+            min-height: 0;
+        }
+    }
+    .read-more {
+        display: inline-block;
+        color: #FF4057;
+        text-transform: uppercase;
+        font-family: "Montserrat Bold";
+        font-size: 0.8em;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #FF4057;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            font-size: .85em;
+        }
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
 
 // Modal
 #tooltip-modal {

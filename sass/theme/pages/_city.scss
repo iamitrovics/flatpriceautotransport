@@ -273,6 +273,11 @@
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
+        &.services-list-blog {
+            margin-top: 0;
+            padding-bottom: 30px;
+            justify-content: center;
+        }
         @include breakpoint (desktop) {
             margin-top: 40px;
             padding-bottom: 60px;
