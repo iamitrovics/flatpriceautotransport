@@ -187,6 +187,47 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <div class="video__holder">
                                         <?php the_sub_field('embedded_code'); ?>
                                     </div>
+
+                                <?php elseif( get_row_layout() == 'services_module' ): ?>
+
+                                    <section class="auto-transport">
+                                        <div class="featured-services services-list-blog">
+
+                                        <?php
+                                        $post_objects = get_sub_field('services_list_blog_page');
+
+                                        if( $post_objects ): ?>
+                                            <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                                                <?php setup_postdata($post); ?>
+
+                                                    <div class="featured-box feat-33">
+                                                        <div class="featured-image">
+                                                            <?php
+                                                            $imageID = get_field('featured_image_service_single');
+                                                            $image = wp_get_attachment_image_src( $imageID, 'service-image' );
+                                                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                                            ?> 
+
+                                                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                                            <a href="<?php echo get_permalink(); ?>" tabindex="0" target="_blank"><span><i class="fal fa-long-arrow-right"></i></span></a>
+                                                        </div>
+                                                        <div class="featured-content">
+                                                            <h4><a href="<?php echo get_permalink(); ?>" tabindex="0" target="_blank"><?php the_title(''); ?></a></h4>
+                                                            <?php the_field('intro_text_service_single'); ?>
+                                                            <a href="<?php echo get_permalink(); ?>"  target="_blank" class="read-more">Read more</a>
+                                                        </div>
+                                                        <!-- /.featured-content -->
+                                                    </div>
+                                                    <!-- /.featured-box -->
+
+                                                    <?php endforeach; ?>
+                                                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                            <?php endif; ?>     
+
+                                        </div>
+                                        <!-- /.featured-services -->
+                                    </section>
+                                    <!-- /#auto-transport -->
                                     
                                 <?php elseif( get_row_layout() == 'featured_article' ): ?>    
                                     <?php
