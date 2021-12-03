@@ -1,0 +1,90 @@
+/*===============================
+=             404              =
+===============================*/
+
+#error-page {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 140px;
+    @include bp(desktop) {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+    @include bp(lg) {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    @include bp(md) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 45px;
+    }
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        @include bp(desktop) {
+            width: 450px;
+        }
+        @include bp(lg) {
+            width: 350px;
+        }
+        @include bp(md) {
+            width: 300px;
+        }
+        @include bp(sm-down) {
+            width: 200px;
+        }
+    }
+    h1 {
+        @include inner-title;
+        color: $red;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+    h2 {
+        @include heading-text2;
+        max-width: 674px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: #9f9f9f;
+        margin-bottom: 50px;
+        @include bp(desktop) {
+            margin-bottom: 40px;
+        }
+        @include bp(lg) {
+            margin-bottom: 35px;
+        }
+        @include bp(md) {
+            margin-bottom: 30px;
+        }
+        @include bp(sm-down) {
+            margin-bottom: 30px;
+        }
+    }
+    a.back {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        height: 47px;
+        line-height: 47px;
+        background: $red;
+        color: #fff;
+        font-family: $mont-ebold;
+        text-transform: uppercase;
+        font-size: 0.938em;
+        padding: 0 20px;
+        &:hover {
+            background-color: $red-dark;
+        }
+        @include bp(sm-down) {
+            font-size: 0.8em;
+        }
+    }
+}
+/*========  End of 404 ========*/

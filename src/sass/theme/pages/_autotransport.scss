@@ -1,0 +1,511 @@
+/*===============================
+=          Autotransport        =
+===============================*/
+
+#autotransport-inner {
+    padding-top: 100px;
+    padding-bottom: 145px;
+    @include bp(desktop) {
+        padding-top: 85px;
+        padding-bottom: 120px;
+    }
+    @include bp(lg) {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+    @include bp(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #shipping {
+        padding-bottom: 65px;
+        @include bp(desktop) {
+            padding-bottom: 55px;
+        }
+        @include bp(lg) {
+            padding-bottom: 45px;
+        }
+        @include bp(md) {
+            padding-bottom: 40px;
+        }
+        @include bp(sm-down) {
+            padding-bottom: 40px;
+        }
+        .col-md-6 {
+            &:last-of-type {
+                @include  bp(lg-up) {
+                   padding-left: 15px; 
+                }
+                
+            }
+        }
+        .shipping-content {
+            padding-right: 110px;
+            @include bp(desktop) {
+                padding-right: 60px;
+            }
+            @include bp(lg) {
+                padding-right: 15px;
+            }
+            @include bp(md) {
+                padding-right: 15px;
+            }
+            @include bp(sm-down) {
+                padding-right: 0px;
+            }
+            h2 {
+                @include heading-text2;
+                margin-bottom: 80px;
+                text-align: left;
+                @include bp(desktop) {
+                    margin-bottom: 60px;
+                }
+                @include bp(lg) {
+                    margin-bottom: 40px;
+                }
+                @include bp(md) {
+                    margin-bottom: 40px;
+                }
+                @include bp(sm-down) {
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                @include regular-text2;
+            }
+        }
+        .shpping-photo {
+            img {
+                padding: 1px;
+                border: 1px solid $red;
+                width: 100%;
+            }
+        }
+    }
+    #why-us-auto {
+        @extend #why-us;
+        padding-bottom: 60px;
+        @include bp(desktop) {
+            padding-bottom: 50px;
+        }
+        @include bp(lg) {
+            padding-bottom: 40px;
+            padding-top: 30px;
+        }
+        @include bp(md) {
+            padding-bottom: 30px;
+            padding-top: 20px;
+        }
+        @include bp(sm-down) {
+            padding-bottom: 30px;
+            padding-top: 10px;
+        }
+        .intro {
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 65px;
+            text-align: center;
+            @include bp(desktop) {
+                margin-bottom: 55px;
+            }
+            @include bp(lg) {
+                margin-bottom: 45px;
+            }
+            @include bp(md) {
+                margin-bottom: 40px;
+            }
+            @include bp(sm-down) {
+                margin-bottom: 40px;
+            }
+            h3 {
+                @include heading-text2;
+                margin-bottom: 30px;
+            }
+            p {
+                @include regular-text2;
+            }
+        }
+        .why-boxes {
+            [class*='col-']{
+                margin-bottom: 30px;
+            }
+            .col-md-12 {
+                .why-box {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        
+        .why-box {
+            padding: 40px 10px 40px 10px;
+            height: 100%;
+            @include bp(sm-down) {
+                padding: 20px 10px 0px 10px!important;
+            }
+            h5 {
+                @include subheading-text;
+                font-size: 1.875em;
+                line-height: 1.233;
+                margin-bottom: 45px;
+                @include bp(desktop) {
+                    margin-bottom: 35px;
+                }
+                @include bp(lg) {
+                    margin-bottom: 30px;
+                }
+                @include bp(md) {
+                    margin-bottom: 25px;
+                }
+                @include bp(sm-down) {
+                    margin-bottom: 20px;
+                }
+            }
+            .why-text {
+                max-width: 570px;
+                margin-left: auto;
+                margin-right: auto;
+                p {
+                    @include regular-text2;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    #types {
+        .intro {
+            text-align: center;
+            margin-bottom: 65px;
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            @include bp(desktop) {
+                margin-bottom: 55px;
+            }
+            @include bp(lg) {
+                margin-bottom: 45px;
+            }
+            @include bp(md) {
+                margin-bottom: 40px;
+            }
+            @include bp(sm-down) {
+                margin-bottom: 40px;
+            }
+            h3 {
+                @include heading-text2;
+                margin-bottom: 30px;
+            }
+            p {
+                @include regular-text2;
+            }
+            ul {
+                list-style-position: inside;
+                list-style-type: disc;
+                li {
+                    
+                }
+            }
+        }
+        #type-boxes {
+            .type-box {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+                margin-bottom: 80px;
+                @include bp(desktop) {
+                    margin-bottom: 70px;
+                }
+                @include bp(lg) {
+                    margin-bottom: 60px;
+                }
+                @include bp(md) {
+                    margin-bottom: 50px;
+                }
+                @include bp(sm-down) {
+                    margin-bottom: 40px;
+                }
+                &:nth-of-type(even) {
+                    flex-direction: row-reverse;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                .type-content, .type-photo {
+                    position: relative;
+                    min-height: 1px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    @include bp(md-down) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+                .type-content {
+
+                    h4 {
+                        @include subheading-text;
+                        color: $red-dark;
+                        margin-bottom: 30px;
+                        @include bp(sm-down) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .type-text {
+                        p {
+                            @include regular-text2;
+                        }
+                    }
+                }
+                .type-photo {
+                    img {
+                        padding: 1px;
+                        border: 1px solid $red;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #faq {
+        margin-top: 125px;
+        @include bp(desktop) {
+            margin-top: 100px;
+        }
+        @include bp(lg) {
+            margin-top: 80px;
+        }
+        @include bp(md) {
+            margin-top: 60px;
+        }
+        @include bp(sm-down) {
+            margin-top: 40px;
+        }
+        .container {
+            @include container-new;
+        }
+        .intro {
+            margin-bottom: 65px;
+            text-align: center;
+            @include bp(desktop) {
+                margin-bottom: 55px;
+            }
+            @include bp(lg) {
+                margin-bottom: 45px;
+            }
+            @include bp(md) {
+                margin-bottom: 40px;
+            }
+            @include bp(sm-down) {
+                margin-bottom: 40px;
+            }
+            h3 {
+                @include heading-text2;
+                margin-bottom: 30px;
+            }
+            p {
+                @include regular-text2;
+            }
+        }
+        #faq-accordion {
+            .faq-box {
+                border: 1px solid $red;
+                margin-bottom: 28px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                >div {
+                    display: none;
+                }
+            }
+            h4 {
+                font-family: $mont-reg;
+                font-size: 1.375em;
+                color: $red;
+                position: relative;
+                padding:0;
+                margin: 0;
+                border: 0;
+                background: #fff;
+                padding: 16px 20px;
+                @include bp(desktop) {
+                font-size: 1.063em;
+                }
+                @include bp(lg) {
+                    font-size: 1em;
+                }
+                @include bp(md) {
+                    font-size: 1em;
+                }
+                @include bp(sm-down) {
+                    font-size: 0.9em;
+                    padding-right: 40px;
+                }
+                &:after {
+                    font-family: "icomoon";
+                    content: "\e908";
+                    @include centre(y);
+                    right: 30px;
+                    font-size: 19px;
+                    font-weight: 300;
+                    color: $red;
+                    @include animate-fade;
+                    @include bp(sm-down) {
+                        font-size: 16px;
+                        right: 15px;
+                    }
+                }
+                &:focus {
+                    outline: none!important;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+                &.ui-state-active, &.active {
+                    &:after {
+                        -webkit-transform: translateY(-50%)  rotate(180deg);
+                        -moz-transform: translateY(-50%)  rotate(180deg);
+                        -ms-transform: translateY(-50%)  rotate(180deg);
+                        -o-transform: translateY(-50%)  rotate(180deg);
+                        transform: translateY(-50%)  rotate(180deg);
+                    }
+                } 
+            }
+            .ui-accordion-content, .faq-box > div {
+                padding: 25px 25px 40px 25px;
+                @include bp(sm-down) {
+                    padding: 10px 25px 20px 25px;
+                }
+                p {
+                    @include regular-text2;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    #at-bottom-content {
+        padding-top: 85px;
+        padding-bottom: 60px;
+        text-align: center;
+        @include bp(desktop) {
+            padding-bottom: 55px;
+            padding-top: 70px;
+        }
+        @include bp(lg) {
+            padding-bottom: 50px;
+            padding-top: 65px;
+        }
+        @include bp(md) {
+            padding-bottom: 50px;
+            padding-top: 55px;
+        }
+        @include bp(sm-down) {
+            padding-bottom: 40px;
+            padding-top: 40px;
+        }
+        .container {
+            @include container-new;
+        }
+        h3 {
+            margin-top: 75px;
+            @include heading-text2;
+            margin-bottom: 40px;
+            @include bp(desktop) {
+                margin-top: 55px;
+            }
+            @include bp(lg) {
+                margin-top: 45px;
+                margin-bottom: 30px;
+            }
+            @include bp(md) {
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+            @include bp(sm-down) {
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+        p {
+            @include regular-text2;
+        }
+    }
+}
+
+#booking-div {
+    @extend #booking-form;
+    position: static;
+    width: 100%;
+    height: auto;
+    padding:0;
+    border-bottom: 0;
+    padding-top: 50px;
+    border-top:3px solid #f1f1f1;
+    margin-top: 50px;
+    @include bp(sm-down) {
+        display: block;
+    }
+    .form-wrapper {
+        @include bp(md-up) {
+            max-width: 824px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include bp(md) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @include bp(sm-down) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            border: 1px solid $red;
+        }
+    }
+}
+
+.no-margin--top {
+    margin-top: 0px !important;
+}
+
+.quote-page-div {
+    padding-top: 0px!important;
+    margin-top: 0px!important;
+    border:none!important;
+}
+
+#autotransport-inner #faq #faq-accordion .faq-box div {
+    display: none;
+    padding: 25px 25px 40px 25px;
+    @include bp(sm-down) {
+        padding: 10px 25px 20px 25px;
+    }
+    p {
+        @include regular-text2;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#autotransport-inner #faq #faq-accordion h4.active:after {
+    -webkit-transform: translateY(-50%)  rotate(180deg);
+    -moz-transform: translateY(-50%)  rotate(180deg);
+    -ms-transform: translateY(-50%)  rotate(180deg);
+    -o-transform: translateY(-50%)  rotate(180deg);
+    transform: translateY(-50%)  rotate(180deg);
+}

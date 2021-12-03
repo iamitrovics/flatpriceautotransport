@@ -1,0 +1,199 @@
+/*===============================
+=        Rewiews Listing       =
+===============================*/
+
+#reviews-page {
+    margin-top: 80px;
+    position: relative;
+    background-color: #F2F2F2;
+    padding-bottom: 30px;
+    @include bp(desktop) {
+        margin-top: 70px;
+    }
+    @include bp(lg) {
+        margin-top: 65px;
+    }
+    @include bp(md) {
+        margin-top: 55px;
+    }
+    @include bp(sm-down) {
+        margin-top: 45px;
+    }
+    &:before {
+        content: '';
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include bp(desktop) {
+            height: 120px;
+        }
+        @include bp(lg) {
+            height: 80px;
+        }
+        @include bp(md) {
+            height: 60px;
+        }
+        @include bp(sm-down) {
+            height: 40px;
+        }
+    }
+    #video-reviews {
+        margin-bottom: 35px;
+    }
+    #textual-reviews {
+        [class*='col-'] {
+           margin-bottom: 30px; 
+        }
+        .review-box {
+            background-color: #fff;
+            padding: 40px; 
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            @include bp(sm-down) {
+                padding: 20px;
+            }
+            h3 {
+                font-family: $mont-bold;
+                font-size: 1.75em;
+                line-height: 1.222;
+                color: #505050;
+                margin-bottom: 20px;
+                @include bp(desktop) {
+                    font-size: 1.5em;
+                }
+                @include bp(lg) {
+                    font-size: 1.5em;
+                }
+                @include bp(md) {
+                    font-size: 1.3em;
+                }
+                @include bp(sm-down) {
+                    font-size: 1.2em;
+                    margin-bottom: 20px;
+                }
+            }
+            .review-text {
+                position: relative;
+                padding-top: 20px;
+                padding-bottom: 55px;
+                flex-grow: 1;
+                @include bp(desktop) {
+                    padding-top: 30px;
+                    padding-bottom: 45px;
+                }
+                @include bp(lg) {
+                    padding-top: 0px;
+                    padding-bottom: 35px;
+                }
+                @include bp(md) {
+                    padding-top: 0;
+                    padding-bottom: 25px;
+                }
+                @include bp(sm-down) {
+                   padding-top: 0;
+                   padding-bottom: 25px;
+                }
+                &:before {
+                    content: '"';
+                    font-family: $mont-bold;
+                    font-size: 310px;
+                    text-align: left;
+                    color: #505050;
+                    opacity: 0.04;
+                    position: absolute;
+                    right: 30px;
+                    top: -115px;
+                    @include bp(desktop) {
+                        top: -70px;
+                        font-size: 210px;
+                    }
+                    @include bp(lg) {
+                        top: -30px;
+                        font-size: 110px;
+                    }
+                    @include bp(md) {
+                        top: -20px;
+                        font-size: 90px;
+                    }
+                    @include bp(sm-down) {
+                        top: -20px;
+                        font-size: 70px;
+                    }
+                }
+                p {
+                    font-family: $mont-light;
+                    font-size: 1.075em;
+                    line-height: 1.5;
+                    color: #000;
+                    position: relative;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    @include bp(desktop) {
+                        font-size: 1.063em;
+                    }
+                    @include bp(lg) {
+                        font-size: 1em;
+                    }
+                    @include bp(md) {
+                        font-size: 1em;
+                    }
+                    @include bp(sm-down) {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            footer {
+                .rating {
+                    margin-bottom: 10px;
+                    i {
+                        font-size: 18px;
+                        display: inline-block;
+                        color: $red;
+                        vertical-align: middle;
+                        margin-left: 6px;
+                        margin-right: 6px;
+                        @include bp(lg) {
+                            font-size: 16px;
+                            margin-left: 6px;
+                            margin-right: 6px;
+                        }
+                        @include bp(md) {
+                            font-size: 14px;
+                            margin-left: 4px;
+                            margin-right: 4px;
+                        }
+                        @include bp(sm-down) {
+                            font-size: 14px;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                        }
+                    }
+                }
+                .author {
+                    font-family: $mont-bold;
+                    font-size: 1.125em;
+                    line-height: 1.389;
+                    color: #9f9f9f;
+                     @include bp(desktop) {
+                        font-size: 1.063em;
+                    }
+                    @include bp(lg) {
+                        font-size: 1em;
+                    }
+                    @include bp(md) {
+                        font-size: 1em;
+                    }
+                    @include bp(sm-down) {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+}
+/*===  End of Review listing ===*/

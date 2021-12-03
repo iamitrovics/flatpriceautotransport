@@ -1,0 +1,123 @@
+/*===============================
+=          Quote Page           =
+===============================*/
+#quote-page {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    h1 {
+        text-transform: none;
+    }
+    h3,p {
+        max-width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #auto-transport {
+        h3 {
+            margin-top: 65px;
+            &:first-of-type {
+                margin-top: 0;
+            }
+            @include bp(sm-down) {
+                margin-top: 35px;
+            }
+        }
+    }
+    #about-page {
+        padding-bottom: 0;
+    }
+}
+
+.default-accordion {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    @include bp(lg) {
+        margin-bottom: 50px;
+        margin-top: 60px;
+    }
+    @include bp(md) {
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    @include bp(sm-down) {
+        margin-bottom: 0px;
+        margin-top: 50px;
+    }
+    .faq-box {
+        border: 1px solid $red;
+        margin-bottom: 15px;
+
+    }
+    h4 {
+        position: relative;
+        padding:0;
+        margin: 0!important;
+        border: 0;
+        background: #fff;
+        padding: 16px 65px;
+        color: $red!important;
+        @include bp(md-down) {
+            font-size: 18px;
+            padding: 16px 40px;
+        }
+        &:after {
+            font-family: "icomoon";
+           content: "\e905";
+            @include centre(y);
+            right: 30px;
+            font-size: 26px;
+            font-weight: 300;
+            color: $red;
+            @include animate-fade;
+            @include bp(desktop) {
+                font-size: 24px;
+            }
+            @include bp(lg) {
+                font-size: 22px;
+            }
+            @include bp(md) {
+                font-size: 20px;
+                right: 15px;
+            }
+            @include bp(sm-down) {
+                font-size: 18px;
+                right: 15px;
+            }
+        }
+        &:focus {
+            outline: none!important;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &.ui-state-active, &.active {
+            &:after {
+                -webkit-transform: translateY(-50%)  rotate(45deg);
+                -moz-transform: translateY(-50%)  rotate(45deg);
+                -ms-transform: translateY(-50%)  rotate(45deg);
+                -o-transform: translateY(-50%)  rotate(45deg);
+                transform: translateY(-50%)  rotate(45deg);
+            }
+        } 
+    }
+    .ui-accordion-content{
+        padding: 20px 25px 0px 25px;
+        p {
+            @include regular-text2;
+        }
+    }
+    .faq-box {
+        div {
+            padding: 20px 25px 0px 25px;
+            display: none;
+            p {
+                @include regular-text2;
+            }
+        }
+    }
+}
+
+/*===  End of Quote Page ===*/

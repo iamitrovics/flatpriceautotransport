@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraLight';
+    src: url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Medium';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Black';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?rsngza');
+    src:  url('../fonts/icomoon.eot?rsngza#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?rsngza') format('truetype'),
+      url('../fonts/icomoon.woff?rsngza') format('woff'),
+      url('../fonts/icomoon.svg?rsngza#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-star-o:before, .fal.fa-star:before {
+    content: "\e90f";
+  }
+
+  .icon-angle-right:before, .fa-angle-right:before {
+    content: "\e910";
+  }
+
+  .icon-yelp:before, .fa-yelp:before {
+    content: "\e900";
+  }
+  .icon-twitter:before, .fa-twitter:before {
+    content: "\e901";
+  }
+  .icon-facebook:before, .fa-facebook:before {
+    content: "\e902";
+  }
+  .icon-phone-alt:before, .fa-phone-alt:before {
+    content: "\e903";
+  }
+  .icon-angle-down:before, .fa-angle-down:before {
+    content: "\e904";
+  }
+  .icon-plus:before, .fa-plus:before {
+    content: "\e905";
+  }
+  .icon-chevron-right:before, .fa-chevron-right:before {
+    content: "\e906";
+  }
+  .icon-chevron-left:before, .fa-chevron-left:before {
+    content: "\e907";
+  }
+  .icon-chevron-down:before, .fa-chevron-down:before {
+    content: "\e908";
+  }
+  .icon-paper-plane:before, .fa-paper-plane:before {
+    content: "\e909";
+  }
+  .icon-star:before, .fas.fa-star:before {
+    content: "\e90a";
+  }
+  .icon-long-arrow-right:before, .fa-long-arrow-right:before {
+    content: "\e90b";
+  }
+  .icon-calendar-alt:before, .fa-calendar-alt:before {
+    content: "\e90c";
+  }
+  .icon-calendar:before, .fa-calendar:before {
+    content: "\e90d";
+  }
+  .icon-location:before, .fa-location:before {
+    content: "\e90e";
+  }
+  
+
+
+$mont-light: 'Montserrat Light';
+$mont-reg: 'Montserrat Regular';
+$mont-bold: 'Montserrat Bold';
+$mont-elight: 'Montserrat ExtraLight';
+$mont-ebold: 'Montserrat ExtraBold';
+$mont-med: 'Montserrat Medium';
+$mont-semi: 'Montserrat SemiBold';
+$mont-black: 'Montserrat Black';
+
+
+$font-main: 'Montserrat Regular';
+$font-heading:  'Montserrat Bold';
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fa, .fab, .fas, .fal {
+    font-family: 'icomoon';
+}
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS
+    overflow-x:hidden; 
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;   
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 30px;
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+.h2, h2 {
+    font-size: 2rem;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.h4, h4 {
+    font-size: 1.5rem;
+}
+
+// reset
+a {
+    @include animate-fade;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+button, input[type="submit"] {
+    @include animate-fade;
+    cursor: pointer;
+}
+
+address {
+    margin:0px;
+    padding:0px;
+}
+iframe {
+    border:0;
+}
+
+i {
+    font-style: normal;
+}
+
+#secondary img, article img, figure, img, img.wp-post-image {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
