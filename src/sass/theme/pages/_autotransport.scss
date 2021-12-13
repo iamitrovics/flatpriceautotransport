@@ -442,6 +442,10 @@
             @include regular-text2;
         }
     }
+    ul {
+        list-style: disc;
+        list-style-position: inside;
+    }
 }
 
 #booking-div {
