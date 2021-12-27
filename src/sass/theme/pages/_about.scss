@@ -68,6 +68,41 @@
             }
         }
     }
+    .location-list {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                display: block;
+                margin-bottom: 15px;
+                padding-left: 20px;
+                font-size: 1em;
+                position: relative;
+                width: 25%;
+                @include bp(md) {
+                    width: 50%;
+                }
+                @include bp(sm-down) {
+                    width: 100%;
+                }
+                &:before {
+                    content:'';
+                    width: 5px;
+                    height: 5px;
+                    background:$red;
+                    position: absolute;
+                    left:0px;
+                    top:8px;
+                }
+                a {
+                    color:$black;
+                    &:hover {
+                        color:$red;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*===  End of Regular Template ===*/
