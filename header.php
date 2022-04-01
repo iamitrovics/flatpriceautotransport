@@ -119,7 +119,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <nav class="navbar navbar-light navbar-expand-lg mainmenu">
 
 							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php the_field('website_logo_branding', 'options'); ?>" width="175" alt="<?php bloginfo('name'); ?>">
+								<img src="<?php the_field('website_logo_branding', 'options'); ?>" width="175" height="51" alt="<?php bloginfo('name'); ?>">
 							</a>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
