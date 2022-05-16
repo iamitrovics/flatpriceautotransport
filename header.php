@@ -22,6 +22,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php if( get_field('head_code_snippet', 'options') ): ?>
 		<?php the_field('head_code_snippet', 'options'); ?>
 	<?php endif; ?>	
+
+	<?php if ( is_singular( array('cities', 'post') ) ) { ?>
+        
+        <?php if( get_field('general_schema_schema', 'options') ): ?>
+            <?php the_field('general_schema_schema', 'options'); ?>
+        <?php endif; ?>    
+
+    <?php } elseif (is_page_template('page-templates/reviews-template.php')) { ?>
+        
+        <?php if( get_field('general_schema_schema', 'options') ): ?>
+            <?php the_field('general_schema_schema', 'options'); ?>
+        <?php endif; ?>    
+
+	<?php } else { ?>
+
+        <?php if( get_field('general_schema_with_reviews', 'options') ): ?>
+            <?php the_field('general_schema_with_reviews', 'options'); ?>
+        <?php endif; ?>    
+
+	<?php } ?>  
+
 	<?php wp_head(); ?>
 </head>
 
