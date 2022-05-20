@@ -6826,7 +6826,7 @@ if (typeof jQuery === 'undefined') {
     $('#city-guides .guide-box .guide-content h4, #reviews-page #textual-reviews .review-box h3').matchHeight();
     $('#why-us .why-box h5').matchHeight();
     $('#why-us .why-box .why-text').matchHeight();
-    $(".testimonial-video .various").fancybox({
+    $(".testimonial-video .various , .video-in a").fancybox({
       maxWidth: 800,
       maxHeight: 600,
       fitToView: false,
@@ -6850,28 +6850,19 @@ if (typeof jQuery === 'undefined') {
         breakpoint: 1199,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }, {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }, {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }]
     });
@@ -6882,34 +6873,24 @@ if (typeof jQuery === 'undefined') {
       slidesToScroll: 1,
       dots: false,
       arrows: true,
-      autoplay: true,
       autoplaySpeed: 8000,
       responsive: [{
         breakpoint: 1199,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }, {
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }, {
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: false,
-          autoplaySpeed: 8000
+          slidesToScroll: 1
         }
       }]
     });

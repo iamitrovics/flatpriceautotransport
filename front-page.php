@@ -134,9 +134,12 @@ get_header(); ?>
         <section class="video-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-8 offset-md-2">
                         <div class="video-in">
-                            <?php the_field('video_code_homepage'); ?>
+                            <a href="<?php the_field('video_code_homepage'); ?>">
+                                <img src="<?php the_field('video_image_home'); ?>" alt="" class="img-video">
+                                <img src="<?php bloginfo('template_directory'); ?>/img/ico/play-circle-light.svg" alt="" class="play-icon">
+                            </a>
                         </div>
                         <!-- /.video-in -->
                     </div>

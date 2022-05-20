@@ -18,16 +18,17 @@
         padding-bottom: 50px;
     }
     .video-in {
-        position: relative;
         width: 100%;
-        padding-bottom: 56.25%;
-        height: 0;
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        position: relative;
+        border:5px solid $red;
+        img.img-video {
             width: 100%;
-            height: 100%;
+            display: block
+        }
+        .play-icon {
+            @include centre(both);
+            width: 60px;
+            filter: brightness(0) invert(1);
         }
     }
 }
