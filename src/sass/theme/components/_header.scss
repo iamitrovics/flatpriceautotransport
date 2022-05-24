@@ -596,6 +596,36 @@
                 color: #505050;
             }
         }
+        .your-state, .your-stateto {
+            position: absolute;
+            top:0px;
+            right:0px;
+            // &:after {
+            //     content:'';
+            //     @include centre(both);
+            //     font-size: 20px;
+            //     background: url('../img/ico/map-marker-alt-light.svg') no-repeat;
+            //     background-size:13px;
+            //     background-position: center center;
+            //     width: 24px;
+            //     height: 24px;
+            //     z-index: 9999;                
+            // }
+            input {
+                width: 34px;
+                height: 34px;
+                text-align: center;
+                line-height: 34px;
+                border:none;
+                background-color: $red;
+                color:$white;
+                border-radius: 100%;
+                padding:0px;
+                font-size: 13px;
+                position: relative;
+                z-index: 4000;
+            }
+        }        
         select {
             width: 100%;
             height: 40px;
@@ -898,3 +928,20 @@
 
 
 /*=====  End of CTAs  ======*/
+
+.pinned {
+    position: relative;
+    &:after {
+        content:'';
+        @include centre(both);
+        font-size: 20px;
+        background: url('../img/ico/map-marker-alt-light.svg') no-repeat;
+        background-color: red;
+
+        background-size:13px;
+        background-position: center center;
+        width: 24px;
+        height: 24px;
+        z-index: 9999;
+    }
+}
