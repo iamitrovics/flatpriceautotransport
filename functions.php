@@ -37,6 +37,8 @@ foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
 
+require_once('inc/wp_bootstrap_mobile_navwalker.php');
+
 add_action('init', 'init_remove_support',100);
 function init_remove_support(){
     $post_type = 'post';

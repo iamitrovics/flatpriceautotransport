@@ -945,3 +945,32 @@
         z-index: 9999;
     }
 }
+
+// mobile
+#mobile-menu--btn {
+    @include centre(y);
+    width: 35px;
+    right: 15px;
+    display: none;
+    @include bp(md-down) {
+        display: block;
+    }
+    a {
+        display: block;
+        width: 100%;
+        span {
+            height: 3px;
+            border-radius:6px;
+            background-color:$red;
+            width: 100%;
+            display: block;
+            float: right;
+            @include animate-fade;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }	
+    }
+    .clearfix {
+        clear: both;
+    }       
+}

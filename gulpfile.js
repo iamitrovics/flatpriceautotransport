@@ -194,7 +194,7 @@ gulp.task( 'scripts', function() {
 		//paths.dev + '/js/dropdown.min.js',
 		//paths.dev + '/js/bootstrap-select.min.js',
 		paths.dev + '/js/jquery.matchHeight.js',
-		paths.dev + '/js/sliding-menu.js',
+		// paths.dev + '/js/sliding-menu.js',
 		
 		// paths.dev + '/js/moment/moment-with-locales.min.js',
 		paths.dev + '/js/jquery.fancybox.min.js',

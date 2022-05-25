@@ -7,6 +7,16 @@ get_header(); ?>
     <header id="hero-banner">
         <div id="hero-content">
             <div class="overlay"></div>
+
+            <?php if ( wp_is_mobile() ) : ?>
+                <?php
+                $imageID = get_field('featured_image_hero_home');
+                $image = wp_get_attachment_image_src( $imageID, 'side-image' );
+                $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                ?> 
+
+                <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+            <?php else : ?>
                 <?php
                 $imageID = get_field('featured_image_hero_home');
                 $image = wp_get_attachment_image_src( $imageID, 'slider-image' );
@@ -14,6 +24,9 @@ get_header(); ?>
                 ?> 
 
                 <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+            <?php endif; ?>
+
+
             <div class="caption">
                 <div class="container">
                     <div class="caption__holder">
