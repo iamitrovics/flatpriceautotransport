@@ -137,3 +137,6 @@ function fb_filter_query( $query, $error = true ) {
 
 add_action( 'parse_query', 'fb_filter_query' );
 add_filter( 'get_search_form', function() { return null;} );
+
+
+add_filter( 'wp_lazy_loading_enabled', '__return_false' );

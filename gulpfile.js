@@ -8,7 +8,7 @@ var rename = require( 'gulp-rename' );
 var concat = require( 'gulp-concat' );
 var uglify = require( 'gulp-uglify' );
 var imagemin = require( 'gulp-imagemin' );
-var sourcemaps = require( 'gulp-sourcemaps' );
+// var sourcemaps = require( 'gulp-sourcemaps' );
 var browserSync = require( 'browser-sync' ).create();
 var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
@@ -34,10 +34,10 @@ gulp.task( 'sass', function() {
 				},
 			} )
 		)
-		.pipe( sourcemaps.init( { loadMaps: true } ) )
+		// .pipe( sourcemaps.init( { loadMaps: true } ) )
 		.pipe( sass( { errLogToConsole: true } ) )
 		.pipe( postcss( [ autoprefixer() ] ) )
-		.pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
+		// .pipe( sourcemaps.write( undefined, { sourceRoot: null } ) )
 		.pipe( gulp.dest( paths.css ) );
 } );
 
@@ -83,11 +83,11 @@ gulp.task( 'minifycss', function() {
 			paths.css + '/custom-editor-style.css',
 			paths.css + '/theme.css',
 		] )
-		.pipe(
-			sourcemaps.init( {
-				loadMaps: true,
-			} )
-		)
+		// .pipe(
+		// 	sourcemaps.init( {
+		// 		loadMaps: true,
+		// 	} )
+		// )
 		.pipe(
 			cleanCSS( {
 				compatibility: '*',
@@ -102,7 +102,7 @@ gulp.task( 'minifycss', function() {
 			} )
 		)
 		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( sourcemaps.write( './' ) )
+		// .pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( paths.css ) );
 } );
 
