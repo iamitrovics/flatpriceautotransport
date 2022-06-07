@@ -6626,12 +6626,12 @@
         }
       });
       $(function () {
-        var date1 = new Date('05/05/2021');
-        var date2 = new Date('05/20/2021');
-        var date3 = new Date('06/05/2021');
-        var date4 = new Date('06/20/2021');
-        var date5 = new Date('07/05/2021');
-        var date6 = new Date('07/20/2021');
+        var date1 = new Date('05/05/2022');
+        var date2 = new Date('05/20/2022');
+        var date3 = new Date('06/05/2022');
+        var date4 = new Date('06/20/2022');
+        var date5 = new Date('07/05/2022');
+        var date6 = new Date('07/20/2022');
         $(".date-picker-input").datepicker({
           minDate: '0',
           showOtherMonths: true,
