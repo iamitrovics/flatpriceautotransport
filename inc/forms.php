@@ -134,12 +134,28 @@ function lead_check_zip_to($zip){ // Check against list of common public email p
     }    
     elseif ( (substr($zip, 0,2) === '82' ) && $the_state == "WY" ) {
         return false; // It's a publicly available email address
-    }                         
+    }     
+
     else {
         return true; // It's a publicly available email address
     }    
 }
 
+
+
+function lead_check_zip_tostate($zip){ // Check against list of common public email providers & return true if the email provided *doesn't* match one of them
+
+    $the_state = isset( $_POST['your-stateto'] ) ? trim( $_POST['your-stateto'] ) : '';
+    $the_statefrom = isset( $_POST['your-state'] ) ? trim( $_POST['your-state'] ) : '';
+
+    if ( $the_state === $the_statefrom )  {
+        return false; // It's a publicly available email address
+    }
+   
+    else {
+        return true; // It's a publicly available email address
+    }    
+}
 
 
 function utm_zip_to_validator($result, $tag) {  
@@ -152,6 +168,11 @@ function utm_zip_to_validator($result, $tag) {
             $result->invalidate( $tag, "Non-serviceable location at the moment. Sorry!" );
         }
 
+        if(!lead_check_zip_tostate($the_value)){
+            $result->invalidate( $tag, "Sorry, we don't cover local moves." );
+        }
+
+
         if(!isValidZipCode($the_value)){
             $result->invalidate( $tag, "Please provide 5 digits ZIP Code" );
         }		
@@ -163,6 +184,9 @@ function utm_zip_to_validator($result, $tag) {
 
 add_filter( 'wpcf7_validate_text', 'utm_zip_to_validator', 10, 2 );
 add_filter( 'wpcf7_validate_text*', 'utm_zip_to_validator', 10, 2 );
+
+
+
 
 
 function cf7_post_to_third_party($form)
