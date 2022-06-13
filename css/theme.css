@@ -3607,7 +3607,8 @@ body.compensate-for-scrollbar {
   line-height: 20px;
   left: 0;
   text-align: center;
-  bottom: 0; }
+  bottom: 0;
+  display: none; }
   @media only screen and (max-width: 767.98px) {
     #cookie-notice {
       display: none !important; } }
@@ -3617,14 +3618,16 @@ body.compensate-for-scrollbar {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both; }
+    animation-fill-mode: both;
+    display: block !important; }
   #cookie-notice.slide-down {
     -webkit-animation-name: slideOutDown;
     animation-name: slideOutDown;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both; }
+    animation-fill-mode: both;
+    opacity: 0; }
   #cookie-notice-in {
     padding: 15px 30px; }
     @media only screen and (min-width: 768px) and (max-width: 991.98px) {

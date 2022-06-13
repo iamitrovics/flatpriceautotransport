@@ -465,6 +465,13 @@ jQuery(document).ready(function($) {
 
   </script>
 
+<script>
+    if (!sessionStorage.alreadyClicked) {
+        jQuery('#cookie-notice').addClass('slide-up');
+        sessionStorage.alreadyClicked = 1;
+    }
+  </script> 	
+
 </body>
 
 </html>

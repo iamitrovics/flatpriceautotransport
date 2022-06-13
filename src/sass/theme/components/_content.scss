@@ -318,6 +318,7 @@
     left: 0;
     text-align: center;
     bottom: 0;
+    display: none;
     @include bp(sm-down) {
         display: none!important;
     }
@@ -328,6 +329,7 @@
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+        display: block!important;
     }
     &.slide-down {
         -webkit-animation-name: slideOutDown;
@@ -336,6 +338,7 @@
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+        opacity: 0;
     }
     &-in {
         padding: 15px 30px;
