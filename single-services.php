@@ -250,7 +250,6 @@ $container = get_theme_mod( 'understrap_container_type' );
             <?php endwhile; ?>
         <?php endif; ?>
 
-        <?php include(TEMPLATEPATH . '/inc/formbottom-inc.php'); ?>
         
     </div>
     <!-- /#autotransport-inner -->

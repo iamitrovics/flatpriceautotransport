@@ -224,7 +224,6 @@ get_header(); ?>
     
         <!-- /#why-us -->
 
-        <?php include(TEMPLATEPATH . '/inc/formbottom-inc.php'); ?>
 
     </div>
     <!-- /#homepage -->

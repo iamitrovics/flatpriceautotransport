@@ -491,6 +491,9 @@
     @include  bp(lg-up) {
         min-height: 638px;
     }
+    @include bp(sm-down) {
+        background: #f2e6dd!important;
+    }
     .overlay {
         position: absolute;
         left: 0;

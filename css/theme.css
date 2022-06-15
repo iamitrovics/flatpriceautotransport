@@ -98,12 +98,6 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'Montserrat Medium';
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
   font-family: 'Montserrat SemiBold';
   src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
@@ -2604,7 +2598,7 @@ body.compensate-for-scrollbar {
             #hero-banner #hero-content .caption .caption__holder h1 {
               font-size: 1.375em; } }
         #hero-banner #hero-content .caption .caption__holder p {
-          font-family: "Montserrat Medium";
+          font-family: "Montserrat SemiBold";
           font-size: 1.15em;
           line-height: 1.5;
           color: #fff;
@@ -3211,7 +3205,7 @@ body.compensate-for-scrollbar {
       height: 100%;
       top: 0;
       left: 0;
-      font-family: "Montserrat Medium";
+      font-family: "Montserrat SemiBold";
       font-size: 8px;
       color: #fff;
       text-transform: uppercase;
@@ -3247,7 +3241,7 @@ body.compensate-for-scrollbar {
       height: 100%;
       top: 0;
       left: 0;
-      font-family: "Montserrat Medium";
+      font-family: "Montserrat SemiBold";
       font-size: 8px;
       color: #fff;
       text-transform: uppercase;
@@ -3949,7 +3943,7 @@ body.compensate-for-scrollbar {
     transition: .25s ease-in-out; }
   #page-footer .col .cert-secure span.code {
     display: block;
-    font-family: "Montserrat Medium";
+    font-family: "Montserrat SemiBold";
     font-size: 0.813em;
     line-height: 30px;
     text-align: left;
@@ -4016,7 +4010,7 @@ body.compensate-for-scrollbar {
       margin-bottom: 0; }
   #page-footer .col .in-touch a {
     display: block;
-    font-family: "Montserrat Medium";
+    font-family: "Montserrat SemiBold";
     font-size: 0.813em;
     color: #FF4057;
     margin-bottom: 15px; }
@@ -4066,7 +4060,7 @@ body.compensate-for-scrollbar {
     .copy-bar .footer-links ul li a {
       display: block;
       padding: 6px 0;
-      font-family: "Montserrat Medium";
+      font-family: "Montserrat SemiBold";
       font-size: 0.813em;
       color: #fff;
       text-transform: capitalize; }
@@ -4769,7 +4763,7 @@ body.compensate-for-scrollbar {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: "Montserrat Medium";
+          font-family: "Montserrat SemiBold";
           font-size: 1.250em;
           line-height: 1.2;
           text-align: center;
@@ -5026,6 +5020,9 @@ body.compensate-for-scrollbar {
   @media only screen and (min-width: 1200px) {
     #reviews {
       min-height: 638px; } }
+  @media only screen and (max-width: 767.98px) {
+    #reviews {
+      background: #f2e6dd !important; } }
   #reviews .overlay {
     position: absolute;
     left: 0;
@@ -5406,7 +5403,7 @@ section.auto-services .services-list {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: "Montserrat Medium";
+        font-family: "Montserrat SemiBold";
         font-size: 1.250em;
         line-height: 1.2;
         text-align: center;
@@ -7003,7 +7000,7 @@ section.auto-services .services-list {
       border: 2px solid #fff;
       box-shadow: 0 0 0 1px #9F9F9F;
       left: 0;
-      font-family: "Montserrat Medium";
+      font-family: "Montserrat SemiBold";
       font-size: 1.250em;
       text-align: center;
       color: #fff;
@@ -7064,7 +7061,7 @@ section.auto-services .services-list {
         font-size: 1.1em;
         margin-bottom: 20px; } }
   .cd-timeline-content p {
-    font-family: "Montserrat Medium";
+    font-family: "Montserrat SemiBold";
     font-size: 0.875em;
     line-height: 1.357;
     color: #8d8d8d; }
@@ -7363,7 +7360,7 @@ section.auto-services .services-list {
           margin-right: 20px; }
   #blog__single a {
     color: #FF4057;
-    font-family: "Montserrat Medium"; }
+    font-family: "Montserrat SemiBold"; }
     #blog__single a:hover {
       text-decoration: underline; }
   #blog__single .main__content {

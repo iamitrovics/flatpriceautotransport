@@ -15,14 +15,6 @@
 }
 
 @font-face {
-    font-family: 'Montserrat Medium';
-    src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
-        // url('../fonts/Montserrat-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Montserrat SemiBold';
     src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
         // url('../fonts/Montserrat-SemiBold.woff') format('woff');
@@ -118,7 +110,7 @@ $mont-reg: 'Montserrat Regular';
 $mont-bold: 'Montserrat Bold';
 // $mont-elight: 'Montserrat ExtraLight';
 // $mont-ebold: 'Montserrat ExtraBold';
-$mont-med: 'Montserrat Medium';
+$mont-med:  'Montserrat SemiBold';
 $mont-semi: 'Montserrat SemiBold';
 // $mont-black: 'Montserrat Black';
 
