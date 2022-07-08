@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+e<?php get_header(); ?>
 
     <header class="blog-header">
         <div class="container">
@@ -16,7 +16,7 @@
             <div class="col-md-12">
                 <div class="blog-filters">
                     <ul>
-                        <li><a href="<?php bloginfo('url'); ?>/blog" class="active">All</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/blog/">All</a></li>
                         <?php wp_list_categories('title_li='); ?>
                     </ul>
                 </div>
