@@ -2986,11 +2986,11 @@ body.compensate-for-scrollbar {
       #booking-form .form-group input[type="number"]::-webkit-input-placeholder,
       #booking-div .form-group input[type="number"]::-webkit-input-placeholder {
         color: #505050; }
-    #booking-form .form-group .your-state, #booking-div .form-group .your-state, #booking-form .form-group .your-stateto, #booking-div .form-group .your-stateto {
+    #booking-form .form-group .your-state, #booking-div .form-group .your-state, #booking-form .form-group .your-stateto, #booking-div .form-group .your-stateto, #booking-form .form-group span[data-name="your-state"], #booking-div .form-group span[data-name="your-state"], #booking-form .form-group span[data-name="your-stateto"], #booking-div .form-group span[data-name="your-stateto"] {
       position: absolute;
       top: 0px;
       right: 0px; }
-      #booking-form .form-group .your-state input, #booking-div .form-group .your-state input, #booking-form .form-group .your-stateto input, #booking-div .form-group .your-stateto input {
+      #booking-form .form-group .your-state input, #booking-div .form-group .your-state input, #booking-form .form-group .your-stateto input, #booking-div .form-group .your-stateto input, #booking-form .form-group span[data-name="your-state"] input, #booking-div .form-group span[data-name="your-state"] input, #booking-form .form-group span[data-name="your-stateto"] input, #booking-div .form-group span[data-name="your-stateto"] input {
         width: 34px;
         height: 34px;
         text-align: center;
