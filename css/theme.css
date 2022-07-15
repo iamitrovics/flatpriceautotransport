@@ -4164,6 +4164,15 @@ body.compensate-for-scrollbar {
   100% {
     transform: scale(1); } }
 
+.insta-icon img {
+  width: 28px;
+  position: relative;
+  top: -4px; }
+
+.insta-icon:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1); }
+
 .mainmenu {
   background: none;
   border: 0 solid;
