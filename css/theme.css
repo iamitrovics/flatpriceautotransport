@@ -2543,7 +2543,7 @@ body.compensate-for-scrollbar {
         #hero-banner #hero-content img {
           height: 350px; } }
     #hero-banner #hero-content .overlay {
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.1);
       position: absolute;
       top: 0;
       left: 0;
