@@ -13,7 +13,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	 * Load theme's JavaScript and CSS sources.
 	 */
 	function understrap_scripts() {
-		// Get the theme data.
+		// Get the theme data.u
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
@@ -31,3 +31,4 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // End of if function_exists( 'understrap_scripts' ).s
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
