@@ -19,6 +19,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="icon" type="image/png"  href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon.png">
+
+	<meta name="ahrefs-site-verification" content="b6d355d34cf2473a151d4e7ec88ef43d1605fe1652e09c0e20b9c0f07a7e0e27">
+	<meta name="google-site-verification" content="-9h2y91bsCUvmIITTZDmogrnbezIHe_PZpydCvjUekY" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-T9RTBRJ');</script>
+	<!-- End Google Tag Manager -->
+
 	<?php if( get_field('head_code_snippet', 'options') ): ?>
 		<?php the_field('head_code_snippet', 'options'); ?>
 	<?php endif; ?>	
@@ -48,6 +60,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9RTBRJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 	<?php if( get_field('body_code_snippet', 'options') ): ?>
 		<?php the_field('body_code_snippet', 'options'); ?>
